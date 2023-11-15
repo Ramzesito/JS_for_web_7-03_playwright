@@ -11,7 +11,7 @@ test('Успешная авторизация', async ({ page }) => {
   await page.getByTestId('login-submit-btn').click();
 
   await expect(page).toHaveURL('https://netology.ru/profile');
-  await expect(page.getByRole('heading', { name: 'Моё обучение' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Моё обучение' })).toHaveText('Моё обучение');
 
 });
 
